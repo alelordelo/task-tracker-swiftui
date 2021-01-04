@@ -10,7 +10,7 @@ import RealmSwift
 
 struct TasksView: View {
     let realm: Realm
-    let projectName: String
+   // let projectName: String
 
     @EnvironmentObject var state: AppState
 
@@ -37,7 +37,7 @@ struct TasksView: View {
                 LastUpdate(date: lastUpdate)
             }
         }
-        .navigationBarTitle("Tasks in \(projectName)", displayMode: .inline)
+       // .navigationBarTitle("Tasks in \(projectName)", displayMode: .inline)
         .navigationBarItems(trailing: Button(action: { self.showingSheet = true }) {
             Image(systemName: "plus.circle.fill")
                 .renderingMode(.original)
@@ -76,20 +76,20 @@ struct TasksView: View {
     }
 }
 
-struct TasksView_Previews: PreviewProvider {
-    static var previews: some View {
-        AppearancePreviews(
-            Group {
-                NavigationView {
-                    TasksView(realm: .sample, projectName: "Sample Project")
-                }
-                Landscape(
-                    NavigationView {
-                        TasksView(realm: .sample, projectName: "Sample Project")
-                    }
-                )
-            }
-        )
-        .environmentObject(AppState())
-    }
-}
+//struct TasksView_Previews: PreviewProvider {
+//    static var previews: some View {
+//        AppearancePreviews(
+//            Group {
+//                NavigationView {
+//                    TasksView(realm: .sample, projectName: "Sample Project")
+//                }
+//                Landscape(
+//                    NavigationView {
+//                        TasksView(realm: .sample, projectName: "Sample Project")
+//                    }
+//                )
+//            }
+//        )
+//        .environmentObject(AppState())
+//    }
+//}

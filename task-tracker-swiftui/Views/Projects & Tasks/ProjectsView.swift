@@ -35,7 +35,7 @@ struct ProjectsView: View {
             }
             Spacer()
             if let tasksRealm = tasksRealm {
-                NavigationLink( destination: TasksView(realm: tasksRealm, projectName: projectName),
+                NavigationLink( destination: TasksView(realm: tasksRealm),
                                 isActive: $showingTasks) {
                     EmptyView() }
             }

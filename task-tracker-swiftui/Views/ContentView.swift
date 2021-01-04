@@ -5,9 +5,11 @@
 //  Created by Andrew Morgan on 03/11/2020.
 //
 
+import Foundation
 import SwiftUI
 
 struct ContentView: View {
+
     @EnvironmentObject var state: AppState
 
     var body: some View {
@@ -15,7 +17,7 @@ struct ContentView: View {
             ZStack {
                 VStack {
                     if state.loggedIn {
-                        ProjectsView()
+                        Home(tasksRealm: state.realmObject!)
                     } else {
                         LoginView()
                     }
@@ -52,7 +54,7 @@ struct ContentView_Previews: PreviewProvider {
                 ContentView()
                     .environmentObject(AppState())
                 Landscape(ContentView()
-                    .environmentObject(AppState()))
+                            .environmentObject(AppState()))
             }
         )
     }
