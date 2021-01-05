@@ -12,6 +12,9 @@ import SwiftUI
 struct Home: View {
 
     @State var tasksRealm: Realm
+    
+    @State var showProjects = false
+
 
     @State private var selection: NavigationItem? = .Tasks
 
@@ -36,6 +39,22 @@ struct Home: View {
 
         }
         .listStyle(SidebarListStyle())
+        
+        .toolbar {
+
+
+          //button that shows project list
+            ToolbarItem(placement: .bottomBar) {
+                //select projec
+                Button(action: { self.showProjects = true }) {
+                Text("select project")
+             }
+            }
+        }
+        
+        .sheet(isPresented: $showProjects) {
+            ProjectsView()
+        }
 
     }
 }

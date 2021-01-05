@@ -22,6 +22,10 @@ struct ProjectsView: View {
     }
 
     var body: some View {
+        
+        NavigationView {
+        
+        
         VStack(spacing: Dimensions.padding) {
             if let projects = state.user?.memberOf {
                 ForEach(projects, id: \.self) { project in
@@ -50,7 +54,11 @@ struct ProjectsView: View {
         }
         .sheet(isPresented: $showingSheet) { TeamsView() }
         .padding(.all, Dimensions.padding)
+      }
     }
+    
+    
+    
 
     func showTasks(_ project: Project) {
         self.showingTasks = false

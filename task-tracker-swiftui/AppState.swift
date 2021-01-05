@@ -24,6 +24,8 @@ class AppState: ObservableObject {
     }
 
     var realmObject: Realm?
+    
+    
     var loggedIn: Bool =  false
     init() {
         loginPublisher
