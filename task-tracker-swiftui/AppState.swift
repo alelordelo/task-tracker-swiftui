@@ -19,7 +19,7 @@ class AppState: ObservableObject {
     var user: User?
 
     var selectedProject: Project {
-        let project = Project(partition: "Project=\(app.currentUser!.id)", name: "Project")
+        let project = Project(partition: "project=\(app.currentUser!.id)", name: "Project")
         return project
     }
 
@@ -51,7 +51,7 @@ class AppState: ObservableObject {
             }, receiveValue: { [self] realm in
                 print("Realm User file location: \(realm.configuration.fileURL!.path)")
 
-                let project = Project(partition: "Project=\(app.currentUser!.id)", name: "Project")
+                let project = Project(partition: "project=\(app.currentUser!.id)", name: "Project")
                 setAppStateObject(project)
                 self.user = realm.objects(User.self).first
             })
