@@ -17,9 +17,11 @@ struct ProjectSelect: View {
         
         NavigationView {
         
-
+                //list with all project user is a mamber of
                 List(state.user!.memberOf, id: \.self) { project in
-                    Button(action: /*@START_MENU_TOKEN@*//*@PLACEHOLDER=Action@*/{}/*@END_MENU_TOKEN@*/) {
+                    
+                    //sets the current project
+                    Button(action: selectProject) {
                         Text(project.name ?? "No project name")
                     }
                     
@@ -39,6 +41,13 @@ struct ProjectSelect: View {
             
       }
     }
+
+func selectProject() {
+    
+    //what should I do to select project???
+
+}
+
     
     
     
