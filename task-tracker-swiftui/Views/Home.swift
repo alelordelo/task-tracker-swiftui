@@ -10,6 +10,9 @@ import RealmSwift
 import SwiftUI
 
 struct Home: View {
+    
+    @EnvironmentObject var state: AppState
+
 
     @State var tasksRealm: Realm
     
@@ -40,6 +43,9 @@ struct Home: View {
         }
         .listStyle(SidebarListStyle())
         
+        .navigationBarTitle(state.selectedProject.name!)
+
+        
         .toolbar {
 
 
@@ -53,7 +59,7 @@ struct Home: View {
         }
         
         .sheet(isPresented: $showProjects) {
-            ProjectsView()
+            ProjectSelect()
         }
 
     }

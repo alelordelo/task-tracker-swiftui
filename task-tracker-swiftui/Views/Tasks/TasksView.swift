@@ -37,7 +37,7 @@ struct TasksView: View {
                 LastUpdate(date: lastUpdate)
             }
         }
-       // .navigationBarTitle("Tasks in \(projectName)", displayMode: .inline)
+        .navigationBarTitle("Tasks in \(state.selectedProject.name!)", displayMode: .inline)
         .navigationBarItems(trailing: Button(action: { self.showingSheet = true }) {
             Image(systemName: "plus.circle.fill")
                 .renderingMode(.original)

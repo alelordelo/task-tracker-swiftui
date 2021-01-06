@@ -16,6 +16,8 @@ class AppState: ObservableObject {
     var cancellables = Set<AnyCancellable>()
     @Published var shouldIndicateActivity = false
     @Published var error: String?
+    
+    
     var user: User?
 
     var selectedProject: Project {
