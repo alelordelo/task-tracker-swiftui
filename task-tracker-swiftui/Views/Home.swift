@@ -43,7 +43,7 @@ struct Home: View {
         }
         .listStyle(SidebarListStyle())
         
-        .navigationBarTitle(state.selectedProject.name!)
+      //  .navigationBarTitle(state.selectedProject.name!)
 
         
         .toolbar {

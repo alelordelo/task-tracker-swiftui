@@ -20,10 +20,8 @@ class AppState: ObservableObject {
     
     var user: User?
 
-    var selectedProject: Project {
-        let project = Project(partition: "project=\(app.currentUser!.id)", name: "Project")
-        return project
-    }
+    var selectedProject: Project?
+
 
     var realmObject: Realm?
     

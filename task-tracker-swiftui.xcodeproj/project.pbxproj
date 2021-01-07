@@ -288,9 +288,9 @@
 		F7C16E0625A5BC3A0059B0AE /* Project */ = {
 			isa = PBXGroup;
 			children = (
+				F7C16E0725A5BC7F0059B0AE /* ProjectSelect.swift */,
 				494742942551645C00FF9F51 /* ManageTeamButton.swift */,
 				4947429C2551647400FF9F51 /* ProjectsView.swift */,
-				F7C16E0725A5BC7F0059B0AE /* ProjectSelect.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
