@@ -59,37 +59,57 @@ struct UpdateTaskView: View {
         }
     }
 
+//    func updateStatus(_ newStatus: TaskStatus) {
+//        state.error = nil
+//        state.shouldIndicateActivity = true
+//        let realmConfig = app.currentUser?.configuration(partitionValue: task._partition)
+//        guard var config = realmConfig else {
+//            state.error = "Internal error - cannot get Realm config"
+//            state.shouldIndicateActivity = false
+//            return
+//        }
+//        config.objectTypes = [Task.self]
+//        Realm.asyncOpen(configuration: config) { result in
+//            switch result {
+//            case .failure(let error):
+//                DispatchQueue.main.async {
+//                    self.state.error = "Couldn't open realm: \(error)"
+//                    state.shouldIndicateActivity = false
+//                }
+//                return
+//            case .success(let realm):
+//                do {
+//                    try realm.write {
+//                        task.statusEnum = newStatus
+//                        state.shouldIndicateActivity = false
+//                        self.presentationMode.wrappedValue.dismiss()
+//                    }
+//                } catch {
+//                    state.error = "Unable to open Realm write transaction"
+//                }
+//            }
+//        }
+//    }
+    
+    
     func updateStatus(_ newStatus: TaskStatus) {
-        state.error = nil
-        state.shouldIndicateActivity = true
-        let realmConfig = app.currentUser?.configuration(partitionValue: task._partition)
-        guard var config = realmConfig else {
-            state.error = "Internal error - cannot get Realm config"
-            state.shouldIndicateActivity = false
-            return
+      state.error = nil
+      state.shouldIndicateActivity = true
+
+      do {
+        try state.realmObject!.write {
+          task.statusEnum = newStatus
         }
-        config.objectTypes = [Task.self]
-        Realm.asyncOpen(configuration: config) { result in
-            switch result {
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.state.error = "Couldn't open realm: \(error)"
-                    state.shouldIndicateActivity = false
-                }
-                return
-            case .success(let realm):
-                do {
-                    try realm.write {
-                        task.statusEnum = newStatus
-                        state.shouldIndicateActivity = false
-                        self.presentationMode.wrappedValue.dismiss()
-                    }
-                } catch {
-                    state.error = "Unable to open Realm write transaction"
-                }
-            }
-        }
+        state.shouldIndicateActivity = false
+        self.presentationMode.wrappedValue.dismiss()
+
+      } catch {
+        state.error = "Unable to open Realm write transaction"
+      }
     }
+    
+    
+
 }
 
 struct UpdateTaskView_Previews: PreviewProvider {

@@ -63,6 +63,8 @@ struct AddTaskView: View {
             state.error = "Unable to open Realm write transaction"
         }
     }
+    
+    
 }
 
 struct AddTaskView_Previews: PreviewProvider {

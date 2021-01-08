@@ -49,13 +49,18 @@ struct ProjectSelect: View {
       }
     }
 
-func selectProject(project: Project, state: AppState) {
-    //what should I do to select project???
-    state.selectedProject = project
-    print("Select Project \(project.partition)")
-    print("Select Project \(project.name)")
+//func selectProject(project: Project, state: AppState) {
+//    //what should I do to select project???
+//    state.selectedProject = project
+//    print("Select Project \(project.partition)")
+//    print("Select Project \(project.name)")
+//
+//}
 
-}
+func selectProject(project: Project, state: AppState) {
+   state.updateRealmInstance(project)
+ }
+
 
     
     

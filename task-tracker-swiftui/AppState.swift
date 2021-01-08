@@ -73,6 +73,27 @@ class AppState: ObservableObject {
             loginPublisher.send(app.currentUser!)
         }
     }
+    
+    func updateRealmInstance(_ project: Project) {
+       let realmConfig = app.currentUser?.configuration(partitionValue: project.partition ?? "")
+       guard var config = realmConfig else {
+         error = "Cannot get Realm config from current user"
+         return
+       }
+       config.objectTypes = [Task.self]
+       Realm.asyncOpen(configuration: config)
+         .receive(on: DispatchQueue.main)
+         .sink(receiveCompletion: { result in
+           if case let .failure(error) = result {
+             self.error = "Failed to open realm: \(error.localizedDescription)"
+           }
+         }, receiveValue: { [self] realm in
+           print("Realm Project file location: \(realm.configuration.fileURL!.path)")
+           self.selectedProject = project
+           self.realmObject = realm
+         })
+         .store(in: &self.cancellables)
+     }
 
     func setAppStateObject(_ project: Project) {
 

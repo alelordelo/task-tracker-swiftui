@@ -43,17 +43,27 @@ struct TasksView: View {
                 .renderingMode(.original)
 
         })
-        .sheet(isPresented: $showingSheet) { AddTaskView(realm: realm) }
+       // .sheet(isPresented: $showingSheet) { AddTaskView(realm: realm) }
+        .sheet(isPresented: $showingSheet) { AddTaskView(realm: state.realmObject!)}
+
         .onAppear(perform: loadData)
         .onDisappear(perform: stopWatching)
     }
 
+//    func loadData() {
+//        tasks = realm.objects(Task.self).sorted(byKeyPath: "_id")
+//        realmNotificationToken = realm.observe { _, _  in
+//            lastUpdate = Date()
+//        }
+//    }
+    
     func loadData() {
-        tasks = realm.objects(Task.self).sorted(byKeyPath: "_id")
-        realmNotificationToken = realm.observe { _, _  in
-            lastUpdate = Date()
-        }
-    }
+         tasks = state.realmObject!.objects(Task.self).sorted(byKeyPath: "_id")
+       realmNotificationToken = state.realmObject!.observe { _, _ in
+           lastUpdate = Date()
+         }
+       }
+
 
     func stopWatching() {
         if let token = realmNotificationToken {
@@ -61,19 +71,34 @@ struct TasksView: View {
         }
     }
 
+//    func deleteTask(at offsets: IndexSet) {
+//        do {
+//            try realm.write {
+//                guard let tasks = tasks else {
+//                    print("tasks not set")
+//                    return
+//                }
+//                realm.delete(tasks[offsets.first!])
+//            }
+//        } catch {
+//            state.error = "Unable to open Realm write transaction"
+//        }
+//    }
+    
     func deleteTask(at offsets: IndexSet) {
         do {
-            try realm.write {
-                guard let tasks = tasks else {
-                    print("tasks not set")
-                    return
-                }
-                realm.delete(tasks[offsets.first!])
+          try state.realmObject!.write {
+            guard let tasks = tasks else {
+              print("tasks not set")
+              return
             }
+            state.realmObject!.delete(tasks[offsets.first!])
+          }
         } catch {
-            state.error = "Unable to open Realm write transaction"
+          state.error = "Unable to open Realm write transaction"
         }
-    }
+      }
+
 }
 
 //struct TasksView_Previews: PreviewProvider {
