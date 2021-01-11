@@ -38,8 +38,13 @@ struct ProjectDetail: View {
                 }, label: {
                     Text("Edit")
                 })
+                
+                //edit modal
                 .sheet(isPresented: $showProjectEdit) {
-                    ProjectEdit(project: project)
+                    ProjectEdit(project: project,
+                                name: project.name ?? "Project Name"
+                    
+                    )
                 }
                 
    
