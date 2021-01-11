@@ -23,7 +23,7 @@ struct ProjectSelect: View {
                 List(state.user!.memberOf, id: \.self) { project in
 
                     //sets the current project
-                    NavigationLink(destination: ProjectDetail()) {
+                    NavigationLink(destination: ProjectDetail(project: project)) {
                         Text(project.name ?? "No project name")
 
                     }

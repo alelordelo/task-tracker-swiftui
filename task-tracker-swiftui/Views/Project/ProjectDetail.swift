@@ -6,16 +6,29 @@
 //
 
 import SwiftUI
+import RealmSwift
 
 struct ProjectDetail: View {
+    
+    var project: Project
+    
+    @EnvironmentObject var state: AppState
+
+  //  let realm: Realm
+   // var project: Project
+    
     var body: some View {
         
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        Form {
+            
+            Text(project.name ?? "project name")
     }
+        
+ }
 }
 
-struct ProjectDetail_Previews: PreviewProvider {
-    static var previews: some View {
-        ProjectDetail()
-    }
-}
+//struct ProjectDetail_Previews: PreviewProvider {
+//    static var previews: some View {
+//        ProjectDetail()
+//    }
+//}
