@@ -46,7 +46,10 @@ struct TasksView: View {
        // .sheet(isPresented: $showingSheet) { AddTaskView(realm: realm) }
         .sheet(isPresented: $showingSheet) { AddTaskView(realm: state.realmObject!)}
 
+        
         .onAppear(perform: loadData)
+        
+        
         .onDisappear(perform: stopWatching)
     }
 

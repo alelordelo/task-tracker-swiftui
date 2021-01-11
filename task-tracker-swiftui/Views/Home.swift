@@ -39,6 +39,15 @@ struct Home: View {
                 Label("Browse", systemImage: "rectangle.on.rectangle.angled")
             }
             .tag(NavigationItem.Tasks)
+            
+            //tasks
+            NavigationLink(destination:
+             TasksView(realm: tasksRealm)
+
+            ) {
+                Label("Browse", systemImage: "rectangle.on.rectangle.angled")
+            }
+            .tag(NavigationItem.Tasks)
 
         }
         .listStyle(SidebarListStyle())
