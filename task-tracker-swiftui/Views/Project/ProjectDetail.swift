@@ -12,6 +12,9 @@ struct ProjectDetail: View {
     
     var project: Project
     
+    @State var showProjectEdit = false
+
+    
     @EnvironmentObject var state: AppState
 
   //  let realm: Realm
@@ -23,6 +26,27 @@ struct ProjectDetail: View {
             
             Text(project.name ?? "project name")
     }
+        
+        .toolbar {
+
+            ToolbarItem(placement: .primaryAction) {
+                
+
+                //edit button
+                Button(action: {
+                    showProjectEdit = true
+                }, label: {
+                    Text("Edit")
+                })
+                .sheet(isPresented: $showProjectEdit) {
+                    ProjectEdit(project: project)
+                }
+                
+   
+                
+            }
+
+        }
         
  }
 }

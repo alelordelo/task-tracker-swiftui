@@ -40,6 +40,7 @@
 		49CDF77025515DDE00DCFB28 /* LabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF76F25515DDE00DCFB28 /* LabeledButton.swift */; };
 		49F2187D2562DC7A00EFDE0B /* LastUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2187C2562DC7A00EFDE0B /* LastUpdate.swift */; };
 		F754DB0925AC86E7003BFBBE /* ProjectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */; };
+		F754DB1125AC8D43003BFBBE /* ProjectEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */; };
 		F788F8E925A36BC400DBE2DF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F8E825A36BC400DBE2DF /* Home.swift */; };
 		F7C16E0825A5BC7F0059B0AE /* ProjectSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C16E0725A5BC7F0059B0AE /* ProjectSelect.swift */; };
 /* End PBXBuildFile section */
@@ -101,6 +102,7 @@
 		49CDF76F25515DDE00DCFB28 /* LabeledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledButton.swift; sourceTree = "<group>"; };
 		49F2187C2562DC7A00EFDE0B /* LastUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdate.swift; sourceTree = "<group>"; };
 		F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetail.swift; sourceTree = "<group>"; };
+		F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEdit.swift; sourceTree = "<group>"; };
 		F788F8E825A36BC400DBE2DF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
 		F7C16E0725A5BC7F0059B0AE /* ProjectSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSelect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -294,6 +296,7 @@
 				494742942551645C00FF9F51 /* ManageTeamButton.swift */,
 				4947429C2551647400FF9F51 /* ProjectsView.swift */,
 				F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */,
+				F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */,
 			);
 			path = Project;
 			sourceTree = "<group>";
@@ -481,6 +484,7 @@
 				49CDF75425515D6800DCFB28 /* LabeledText.swift in Sources */,
 				0A4EA3AC258CF49C0003F0E4 /* CheckBox.swift in Sources */,
 				490A51802566EFD80067A337 /* OpaqueProgressView.swift in Sources */,
+				F754DB1125AC8D43003BFBBE /* ProjectEdit.swift in Sources */,
 				494742952551645C00FF9F51 /* ManageTeamButton.swift in Sources */,
 				F7C16E0825A5BC7F0059B0AE /* ProjectSelect.swift in Sources */,
 				494742C0255165DA00FF9F51 /* User.swift in Sources */,
