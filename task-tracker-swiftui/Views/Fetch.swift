@@ -13,6 +13,8 @@ struct Fetch: View {
     @EnvironmentObject var state: AppState
 
     @State var realmNotificationToken: NotificationToken?
+    
+    //how to define task as the server task, not local?
     @State var tasks: Results<Task>?
     
     var body: some View {
@@ -62,10 +64,12 @@ struct Fetch: View {
         //       If you intend to operate on the UI, dispatch back to the main
         //       thread with `DispatchQueue.main.async {}`.
         switch result {
+        
         case .failure(let error):
             // Handle errors
             print("Call to MongoDB failed: \(error.localizedDescription)")
             return
+            
         case .success(let documents):
             // Print each document
             print("Results:")
