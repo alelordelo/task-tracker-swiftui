@@ -42,6 +42,9 @@
 		F754DB0925AC86E7003BFBBE /* ProjectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */; };
 		F754DB1125AC8D43003BFBBE /* ProjectEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */; };
 		F788F8E925A36BC400DBE2DF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F8E825A36BC400DBE2DF /* Home.swift */; };
+		F7A9AE4325ADB91900821379 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9AE4225ADB91900821379 /* Search.swift */; };
+		F7A9AE4825ADB95400821379 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9AE4725ADB95400821379 /* SearchBar.swift */; };
+		F7A9AE4D25ADBAD000821379 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9AE4C25ADBAD000821379 /* Fetch.swift */; };
 		F7C16E0825A5BC7F0059B0AE /* ProjectSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C16E0725A5BC7F0059B0AE /* ProjectSelect.swift */; };
 /* End PBXBuildFile section */
 
@@ -104,6 +107,9 @@
 		F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetail.swift; sourceTree = "<group>"; };
 		F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEdit.swift; sourceTree = "<group>"; };
 		F788F8E825A36BC400DBE2DF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
+		F7A9AE4225ADB91900821379 /* Search.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Search.swift; sourceTree = "<group>"; };
+		F7A9AE4725ADB95400821379 /* SearchBar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchBar.swift; sourceTree = "<group>"; };
+		F7A9AE4C25ADBAD000821379 /* Fetch.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Fetch.swift; sourceTree = "<group>"; };
 		F7C16E0725A5BC7F0059B0AE /* ProjectSelect.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectSelect.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -138,6 +144,8 @@
 			children = (
 				49CDF70E25515A5D00DCFB28 /* ContentView.swift */,
 				F788F8E825A36BC400DBE2DF /* Home.swift */,
+				F7A9AE4C25ADBAD000821379 /* Fetch.swift */,
+				F7A9AE4225ADB91900821379 /* Search.swift */,
 				49CDF75225515D4000DCFB28 /* Components */,
 				49CDF77425515DFB00DCFB28 /* User Accounts */,
 				49CDF74425515CC500DCFB28 /* Teams */,
@@ -268,6 +276,7 @@
 				49F2187C2562DC7A00EFDE0B /* LastUpdate.swift */,
 				490A517F2566EFD80067A337 /* OpaqueProgressView.swift */,
 				0A4EA3AB258CF49B0003F0E4 /* CheckBox.swift */,
+				F7A9AE4725ADB95400821379 /* SearchBar.swift */,
 			);
 			path = Components;
 			sourceTree = "<group>";
@@ -477,15 +486,18 @@
 				49CDF76125515D9900DCFB28 /* InputField.swift in Sources */,
 				49474289255163CC00FF9F51 /* LogoutButton.swift in Sources */,
 				49CDF70D25515A5D00DCFB28 /* task_tracker_swiftuiApp.swift in Sources */,
+				F7A9AE4825ADB95400821379 /* SearchBar.swift in Sources */,
 				494742A7255164A700FF9F51 /* TaskView.swift in Sources */,
 				49474284255163AF00FF9F51 /* LoginView.swift in Sources */,
 				494742A22551649200FF9F51 /* TasksView.swift in Sources */,
+				F7A9AE4D25ADBAD000821379 /* Fetch.swift in Sources */,
 				49A7A380255D41B7008E9FA0 /* SampleData.swift in Sources */,
 				49CDF75425515D6800DCFB28 /* LabeledText.swift in Sources */,
 				0A4EA3AC258CF49C0003F0E4 /* CheckBox.swift in Sources */,
 				490A51802566EFD80067A337 /* OpaqueProgressView.swift in Sources */,
 				F754DB1125AC8D43003BFBBE /* ProjectEdit.swift in Sources */,
 				494742952551645C00FF9F51 /* ManageTeamButton.swift in Sources */,
+				F7A9AE4325ADB91900821379 /* Search.swift in Sources */,
 				F7C16E0825A5BC7F0059B0AE /* ProjectSelect.swift in Sources */,
 				494742C0255165DA00FF9F51 /* User.swift in Sources */,
 			);

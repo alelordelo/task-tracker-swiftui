@@ -18,13 +18,15 @@ struct Home: View {
     
     @State var showProjects = false
 
+    @State private var searchText = ""
 
-    @State private var selection: NavigationItem? = .Tasks
+
+    @State private var selection: NavigationItem? = .List
 
     enum NavigationItem {
-        case Tasks
+        case List
         case Search
-        case Fabrics
+        case Fetch
     }
 
     var body: some View {
@@ -36,18 +38,28 @@ struct Home: View {
              TasksView(realm: tasksRealm)
 
             ) {
-                Label("Browse", systemImage: "rectangle.on.rectangle.angled")
+                Label("List", systemImage: "list.bullet")
             }
-            .tag(NavigationItem.Tasks)
+            .tag(NavigationItem.List)
             
-            //tasks
+            //search
             NavigationLink(destination:
-             TasksView(realm: tasksRealm)
+            SearchBar(text: $searchText)
 
             ) {
-                Label("Browse", systemImage: "rectangle.on.rectangle.angled")
+                Label("Search", systemImage: "magnifyingglass")
             }
-            .tag(NavigationItem.Tasks)
+            .tag(NavigationItem.Search)
+            
+            
+            //fetch
+            NavigationLink(destination:
+             Fetch()
+
+            ) {
+                Label("Fetch", systemImage: "arrow.down.square")
+            }
+            .tag(NavigationItem.Fetch)
 
         }
         .listStyle(SidebarListStyle())
