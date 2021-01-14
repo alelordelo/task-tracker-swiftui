@@ -15,9 +15,11 @@ struct task_tracker_swiftuiApp: SwiftUI.App {
     @StateObject var state = AppState()
 
     var body: some Scene {
+        
         WindowGroup {
             ContentView()
                 .environmentObject(state)
         }
+        
     }
 }

@@ -89,44 +89,31 @@ struct ProjectEdit: View {
     //update edited workspace to Realm
 
     func updateProject(updatedProject: Project) {
-
-        state.error = nil
-       // state.shouldIndicateActivity = true
-
-        let realmConfig = app.currentUser?.configuration(partitionValue: project.partition!)
-
-        guard var config = realmConfig else {
-            state.error = "Internal error - cannot get Realm config"
-           // state.shouldIndicateActivity = false
-            return
-        }
-
-        config.objectTypes = [Project.self]
-
-        Realm.asyncOpen(configuration: config) { result in
-            switch result {
-            case .failure(let error):
-                DispatchQueue.main.async {
-                    self.state.error = "Couldn't open realm: \(error)"
-                //    state.shouldIndicateActivity = false
-                }
-                return
-            case .success(let realm):
-
-                do {
-                    try state.realmObject!.write {
-                        
-                        project.name = name
-
-                    //   state.shouldIndicateActivity = false
-                        self.presentationMode.wrappedValue.dismiss()
-                    }
-                } catch {
-                    state.error = "Unable to open Realm write transaction"
-                }
-            }
-        }
-    }
+         state.error = nil
+         let partitionValue = app.currentUser?.id ?? ""
+         let realmConfig = app.currentUser?.configuration(partitionValue: "user=\(partitionValue)")
+         
+         guard var config = realmConfig else {
+             state.error = "Internal error - cannot get Realm config"
+             return
+         }
+         config.objectTypes = [User.self, Project.self]
+         
+         if state.realmUserObject == nil {
+             state.realmUserObject = try! Realm(configuration: config)
+         }
+         do {
+             try state.realmUserObject!.write {
+                 updatedProject.name = name
+             }
+             state.shouldIndicateActivity = false
+             self.presentationMode.wrappedValue.dismiss()
+             
+         } catch {
+             state.error = "Unable to open Realm write transaction"
+         }
+         
+     }
 
 }
 

@@ -22,6 +22,8 @@ class AppState: ObservableObject {
 
     var selectedProject: Project?
 
+    var realmUserObject: Realm?
+
 
     var realmObject: Realm?
     
