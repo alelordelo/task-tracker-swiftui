@@ -14,7 +14,7 @@ struct Search: View {
 
     @State var users: Results<User>?
 
-
+    
     @State private var searchText = ""
 
     var body: some View {
@@ -30,14 +30,14 @@ struct Search: View {
           
                 List {
                    
-                   //how can I filter??
-                  //  ForEach(state.user.freeze().filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { user in
+                   //how can I search for users??
+               //   ForEach(state.user.freeze().filter({ searchText.isEmpty ? true : $0.name.contains(searchText) })) { user in
 
-                        
+                    //user name
                     Text(state.user!.name)
 
                     }
-                 .onAppear(perform: searchTasks)
+                 .onAppear(perform: fetchData)
              
           
             }
@@ -47,46 +47,41 @@ struct Search: View {
         }
 
 
-    func searchTasks() {
-// how can I fetch seacrched items on Realm MongoDB??
-        
-        // mongodb-atlas is the cluster service name
-        let client = app.currentUser!.mongoClient("mongodb-atlas")
-        
-        // Select the database
-        let database = client.database(named: "tracker")
-        
-        // Select the collection
-        let collection = database.collection(withName: "Task")
-         
-        // Using the user's id to look up tasks
-        let user = app.currentUser!
-        let identity = user.id
-        
-        // Run the query
-        collection.find(filter: ["_partition": AnyBSON(identity)], { (result) in
-            // Note: this completion handler may be called on a background thread.
-            //       If you intend to operate on the UI, dispatch back to the main
-            //       thread with `DispatchQueue.main.async {}`.
-            switch result {
-            case .failure(let error):
-                // Handle errors
-                print("Call to MongoDB failed: \(error.localizedDescription)")
-                return
-            case .success(let documents):
-                // Print each document
-                print("Results:")
-                documents.forEach({(document) in
-                    print("Document:")
-                    document.forEach({ (key, value) in
-                        print("  key: \(key), value: \(value!)")
-                    })
-                })
-            }
-        })
-        
-        
-       }
+    private func fetchData() {
+
+       // mongodb-atlas is the cluster service name
+       let client = app.currentUser!.mongoClient("mongodb-atlas")
+
+       // Select the database
+       let database = client.database(named: "tracker2")
+
+       // Select the collection
+       let collection = database.collection(withName: "User")
+
+       collection.aggregate( pipeline: [], { (result) in
+           // Note: this completion handler may be called on a background thread.
+           //       If you intend to operate on the UI, dispatch back to the main
+           //       thread with `DispatchQueue.main.async {}`.
+           switch result {
+
+           case .failure(let error):
+               // Handle errors
+               print("Call to MongoDB failed: \(error.localizedDescription)")
+               return
+
+           case .success(let documents):
+               // Print each document
+               print("Results: \(documents)")
+               documents.forEach({(document) in
+                   print("Document:")
+                   document.forEach({ (key, value) in
+                       print("  key: \(key), value: \(value)")
+                   })
+               })
+           }
+       })
+   }
+
     
     
     
