@@ -17,6 +17,13 @@ struct ProjectEdit: View {
     @EnvironmentObject var state: AppState
     @Environment(\.presentationMode) var presentationMode
 
+    //selected profile image
+    @State var selectedProfileImage = UIImage()
+
+    //file importer
+    @State private var target: Binding<UIImage>?
+    @State private var openFile = false
+    
 
     @State var name = ""
     
@@ -27,6 +34,27 @@ struct ProjectEdit: View {
         Form {
             
         TextField("Name", text: $name)
+            
+            
+            //profile image
+            HStack(alignment: .center) {
+            Text("Profile Image")
+
+            Spacer()
+
+            Button(action: {
+                    self.target = $selectedProfileImage
+                    self.openFile.toggle()
+                }) {
+
+                    Image(uiImage: self.selectedProfileImage)
+                    .renderingMode(.original)
+                    .resizable()
+                    .frame(width: 48, height: 48)
+                    .clipShape(Circle())
+                }
+            }
+            
 
          }
         
@@ -59,6 +87,25 @@ struct ProjectEdit: View {
         }
         .navigationViewStyle(StackNavigationViewStyle())
         
+        //file importer
+        .fileImporter(isPresented: $openFile, allowedContentTypes: [.image]) { (res) in
+            do {
+                let fileUrl = try res.get()
+                print(fileUrl)
+
+                guard fileUrl.startAccessingSecurityScopedResource() else { return }
+                if let imageData = try? Data(contentsOf: fileUrl),
+                let image = UIImage(data: imageData) {
+                    self.target?.wrappedValue = image
+                }
+                fileUrl.stopAccessingSecurityScopedResource()
+
+            } catch {
+
+                print("error reading")
+                print(error.localizedDescription)
+            }
+        }
  
 
         
@@ -97,6 +144,12 @@ struct ProjectEdit: View {
              state.error = "Internal error - cannot get Realm config"
              return
          }
+        
+        
+        //convert image data
+         let selectedProfileImageConverted = self.selectedProfileImage.jpegData(compressionQuality: 0.80)
+        
+        
          config.objectTypes = [User.self, Project.self]
          
          if state.realmUserObject == nil {
@@ -104,7 +157,11 @@ struct ProjectEdit: View {
          }
          do {
              try state.realmUserObject!.write {
+                
                  updatedProject.name = name
+                
+                updatedProject.profileImage = selectedProfileImageConverted
+
              }
              state.shouldIndicateActivity = false
              self.presentationMode.wrappedValue.dismiss()

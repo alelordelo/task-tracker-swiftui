@@ -14,6 +14,8 @@ struct ProjectDetail: View {
     
     @State var showProjectEdit = false
 
+    @State var image: Data = .init(count:0)
+
     
     @EnvironmentObject var state: AppState
 
@@ -24,7 +26,23 @@ struct ProjectDetail: View {
         
         Form {
             
+            //project name
             Text(project.name ?? "project name")
+            
+            //project profile image
+            HStack(alignment: .center) {
+
+            Text("Profile Image")
+
+            Spacer()
+              
+            Image(uiImage: UIImage(data: project.profileImage ?? self.image) ?? UIImage())
+            .renderingMode(.original)
+            .resizable()
+            .frame(width: 48, height: 48)
+            .clipShape(Circle())
+
+            }
     }
         
         .toolbar {
