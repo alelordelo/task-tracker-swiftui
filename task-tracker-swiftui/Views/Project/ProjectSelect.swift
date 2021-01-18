@@ -14,6 +14,8 @@ struct ProjectSelect: View {
     
     @State var showingSheet = false
 
+    @State var image: Data = .init(count:0)
+
 
     var body: some View {
 
@@ -24,7 +26,19 @@ struct ProjectSelect: View {
 
                     //sets the current project
                     NavigationLink(destination: ProjectDetail(project: project)) {
+                        
+                        HStack {
+                            
+                      
                         Text(project.name ?? "No project name")
+                        
+                        Image(uiImage: UIImage(data: project.profileImage ?? self.image) ?? UIImage())
+                        .renderingMode(.original)
+                        .resizable()
+                        .frame(width: 48, height: 48)
+                        .clipShape(Circle())
+                            
+                        }
 
                     }
                     
