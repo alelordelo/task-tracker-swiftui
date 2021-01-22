@@ -22,7 +22,7 @@ struct ProjectSelect: View {
         NavigationView {
 
                 //list with all project user is a mamber of
-                List(state.user!.memberOf, id: \.self) { project in
+            List(state.user!.memberOf, id: \.self) { project in
 
                     //sets the current project
                     NavigationLink(destination: ProjectDetail(project: project)) {
