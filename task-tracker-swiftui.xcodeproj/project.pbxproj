@@ -39,6 +39,42 @@
 		49CDF76B25515DC700DCFB28 /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF76A25515DC700DCFB28 /* CallToActionButton.swift */; };
 		49CDF77025515DDE00DCFB28 /* LabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF76F25515DDE00DCFB28 /* LabeledButton.swift */; };
 		49F2187D2562DC7A00EFDE0B /* LastUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2187C2562DC7A00EFDE0B /* LastUpdate.swift */; };
+		F710DE7025C862B600FD4AC4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F710DE6F25C862B600FD4AC4 /* Assets.xcassets */; };
+		F710DE7325C862B600FD4AC4 /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F710DE7225C862B600FD4AC4 /* Preview Assets.xcassets */; };
+		F710DE7D25C862C600FD4AC4 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF70E25515A5D00DCFB28 /* ContentView.swift */; };
+		F710DE7E25C862C600FD4AC4 /* AppState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4982D43325540B1C00E874B1 /* AppState.swift */; };
+		F710DE8325C8630E00FD4AC4 /* task_tracker_swiftuiApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF70C25515A5D00DCFB28 /* task_tracker_swiftuiApp.swift */; };
+		F710DE8825C8631500FD4AC4 /* Fetch.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9AE4C25ADBAD000821379 /* Fetch.swift */; };
+		F710DE8925C8631500FD4AC4 /* Search.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9AE4225ADB91900821379 /* Search.swift */; };
+		F710DE8A25C8631500FD4AC4 /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F8E825A36BC400DBE2DF /* Home.swift */; };
+		F710DE9B25C863CA00FD4AC4 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49474283255163AF00FF9F51 /* LoginView.swift */; };
+		F710DE9C25C863CA00FD4AC4 /* LogoutButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49474288255163CC00FF9F51 /* LogoutButton.swift */; };
+		F710DEA125C863D000FD4AC4 /* AddTeamMemberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF74D25515D1100DCFB28 /* AddTeamMemberView.swift */; };
+		F710DEA225C863D000FD4AC4 /* TeamsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF74525515CE300DCFB28 /* TeamsView.swift */; };
+		F710DEAF25C864E000FD4AC4 /* ManageTeamButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742942551645C00FF9F51 /* ManageTeamButton.swift */; };
+		F710DEB025C864E000FD4AC4 /* ProjectsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4947429C2551647400FF9F51 /* ProjectsView.swift */; };
+		F710DEB125C864E000FD4AC4 /* ProjectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */; };
+		F710DEB225C864E000FD4AC4 /* ProjectEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */; };
+		F710DEB325C864E000FD4AC4 /* ProjectSelect.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7C16E0725A5BC7F0059B0AE /* ProjectSelect.swift */; };
+		F710DEB825C864EA00FD4AC4 /* OpaqueProgressView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 490A517F2566EFD80067A337 /* OpaqueProgressView.swift */; };
+		F710DEB925C864EA00FD4AC4 /* InputField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF76025515D9900DCFB28 /* InputField.swift */; };
+		F710DEBA25C864EA00FD4AC4 /* LastUpdate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49F2187C2562DC7A00EFDE0B /* LastUpdate.swift */; };
+		F710DEBB25C864EA00FD4AC4 /* CheckBox.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0A4EA3AB258CF49B0003F0E4 /* CheckBox.swift */; };
+		F710DEBC25C864EA00FD4AC4 /* SearchBar.swift in Sources */ = {isa = PBXBuildFile; fileRef = F7A9AE4725ADB95400821379 /* SearchBar.swift */; };
+		F710DEBD25C864EA00FD4AC4 /* LabeledText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF75325515D6800DCFB28 /* LabeledText.swift */; };
+		F710DEBE25C864EA00FD4AC4 /* LabeledButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF76F25515DDE00DCFB28 /* LabeledButton.swift */; };
+		F710DEBF25C864EA00FD4AC4 /* CallToActionButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF76A25515DC700DCFB28 /* CallToActionButton.swift */; };
+		F710DEC025C864EA00FD4AC4 /* CaptionLabel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49CDF76525515DB000DCFB28 /* CaptionLabel.swift */; };
+		F710DEC525C864FD00FD4AC4 /* TaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742A6255164A700FF9F51 /* TaskView.swift */; };
+		F710DEC625C864FD00FD4AC4 /* UpdateTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742B0255164D400FF9F51 /* UpdateTaskView.swift */; };
+		F710DEC725C864FD00FD4AC4 /* TasksView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742A12551649200FF9F51 /* TasksView.swift */; };
+		F710DEC825C864FD00FD4AC4 /* AddTaskView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742AB255164BC00FF9F51 /* AddTaskView.swift */; };
+		F710DECD25C8650100FD4AC4 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742CC2551660400FF9F51 /* Task.swift */; };
+		F710DECE25C8650100FD4AC4 /* Project.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742C7255165EB00FF9F51 /* Project.swift */; };
+		F710DECF25C8650100FD4AC4 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 494742BF255165DA00FF9F51 /* User.swift */; };
+		F710DED825C8656F00FD4AC4 /* SampleData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7A37F255D41B7008E9FA0 /* SampleData.swift */; };
+		F710DED925C8656F00FD4AC4 /* SampleRealm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7A398255D8A2D008E9FA0 /* SampleRealm.swift */; };
+		F710DEDE25C865A700FD4AC4 /* PreviewHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 49A7A393255D42AB008E9FA0 /* PreviewHelpers.swift */; };
 		F754DB0925AC86E7003BFBBE /* ProjectDetail.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */; };
 		F754DB1125AC8D43003BFBBE /* ProjectEdit.swift in Sources */ = {isa = PBXBuildFile; fileRef = F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */; };
 		F788F8E925A36BC400DBE2DF /* Home.swift in Sources */ = {isa = PBXBuildFile; fileRef = F788F8E825A36BC400DBE2DF /* Home.swift */; };
@@ -104,6 +140,11 @@
 		49CDF76A25515DC700DCFB28 /* CallToActionButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CallToActionButton.swift; sourceTree = "<group>"; };
 		49CDF76F25515DDE00DCFB28 /* LabeledButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabeledButton.swift; sourceTree = "<group>"; };
 		49F2187C2562DC7A00EFDE0B /* LastUpdate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LastUpdate.swift; sourceTree = "<group>"; };
+		F710DE6925C862B500FD4AC4 /* task-tracker-swiftui Mac.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "task-tracker-swiftui Mac.app"; sourceTree = BUILT_PRODUCTS_DIR; };
+		F710DE6F25C862B600FD4AC4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F710DE7225C862B600FD4AC4 /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		F710DE7425C862B600FD4AC4 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F710DE7525C862B600FD4AC4 /* task_tracker_swiftui_Mac.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = task_tracker_swiftui_Mac.entitlements; sourceTree = "<group>"; };
 		F754DB0825AC86E7003BFBBE /* ProjectDetail.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectDetail.swift; sourceTree = "<group>"; };
 		F754DB1025AC8D43003BFBBE /* ProjectEdit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProjectEdit.swift; sourceTree = "<group>"; };
 		F788F8E825A36BC400DBE2DF /* Home.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Home.swift; sourceTree = "<group>"; };
@@ -130,6 +171,13 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 		49CDF72225515A6000DCFB28 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F710DE6625C862B500FD4AC4 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -189,6 +237,7 @@
 			isa = PBXGroup;
 			children = (
 				49CDF70B25515A5D00DCFB28 /* task-tracker-swiftui */,
+				F710DE6A25C862B500FD4AC4 /* task-tracker-swiftui Mac */,
 				49CDF71D25515A5F00DCFB28 /* task-tracker-swiftuiTests */,
 				49CDF72825515A6000DCFB28 /* task-tracker-swiftuiUITests */,
 				49CDF70A25515A5D00DCFB28 /* Products */,
@@ -202,6 +251,7 @@
 				49CDF70925515A5D00DCFB28 /* task-tracker-swiftui.app */,
 				49CDF71A25515A5F00DCFB28 /* task-tracker-swiftuiTests.xctest */,
 				49CDF72525515A6000DCFB28 /* task-tracker-swiftuiUITests.xctest */,
+				F710DE6925C862B500FD4AC4 /* task-tracker-swiftui Mac.app */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -298,6 +348,25 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		F710DE6A25C862B500FD4AC4 /* task-tracker-swiftui Mac */ = {
+			isa = PBXGroup;
+			children = (
+				F710DE6F25C862B600FD4AC4 /* Assets.xcassets */,
+				F710DE7425C862B600FD4AC4 /* Info.plist */,
+				F710DE7525C862B600FD4AC4 /* task_tracker_swiftui_Mac.entitlements */,
+				F710DE7125C862B600FD4AC4 /* Preview Content */,
+			);
+			path = "task-tracker-swiftui Mac";
+			sourceTree = "<group>";
+		};
+		F710DE7125C862B600FD4AC4 /* Preview Content */ = {
+			isa = PBXGroup;
+			children = (
+				F710DE7225C862B600FD4AC4 /* Preview Assets.xcassets */,
+			);
+			path = "Preview Content";
+			sourceTree = "<group>";
+		};
 		F7C16E0625A5BC3A0059B0AE /* Project */ = {
 			isa = PBXGroup;
 			children = (
@@ -370,13 +439,30 @@
 			productReference = 49CDF72525515A6000DCFB28 /* task-tracker-swiftuiUITests.xctest */;
 			productType = "com.apple.product-type.bundle.ui-testing";
 		};
+		F710DE6825C862B500FD4AC4 /* task-tracker-swiftui Mac */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F710DE7825C862B600FD4AC4 /* Build configuration list for PBXNativeTarget "task-tracker-swiftui Mac" */;
+			buildPhases = (
+				F710DE6525C862B500FD4AC4 /* Sources */,
+				F710DE6625C862B500FD4AC4 /* Frameworks */,
+				F710DE6725C862B500FD4AC4 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "task-tracker-swiftui Mac";
+			productName = "task-tracker-swiftui Mac";
+			productReference = F710DE6925C862B500FD4AC4 /* task-tracker-swiftui Mac.app */;
+			productType = "com.apple.product-type.application";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
 		49CDF70125515A5D00DCFB28 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastSwiftUpdateCheck = 1210;
+				LastSwiftUpdateCheck = 1240;
 				LastUpgradeCheck = 1210;
 				TargetAttributes = {
 					49CDF70825515A5D00DCFB28 = {
@@ -389,6 +475,9 @@
 					49CDF72425515A6000DCFB28 = {
 						CreatedOnToolsVersion = 12.1;
 						TestTargetID = 49CDF70825515A5D00DCFB28;
+					};
+					F710DE6825C862B500FD4AC4 = {
+						CreatedOnToolsVersion = 12.4;
 					};
 				};
 			};
@@ -411,6 +500,7 @@
 				49CDF70825515A5D00DCFB28 /* task-tracker-swiftui */,
 				49CDF71925515A5F00DCFB28 /* task-tracker-swiftuiTests */,
 				49CDF72425515A6000DCFB28 /* task-tracker-swiftuiUITests */,
+				F710DE6825C862B500FD4AC4 /* task-tracker-swiftui Mac */,
 			);
 		};
 /* End PBXProject section */
@@ -436,6 +526,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F710DE6725C862B500FD4AC4 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F710DE7325C862B600FD4AC4 /* Preview Assets.xcassets in Resources */,
+				F710DE7025C862B600FD4AC4 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -516,6 +615,47 @@
 			buildActionMask = 2147483647;
 			files = (
 				49CDF72A25515A6000DCFB28 /* task_tracker_swiftuiUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F710DE6525C862B500FD4AC4 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F710DEC825C864FD00FD4AC4 /* AddTaskView.swift in Sources */,
+				F710DE8825C8631500FD4AC4 /* Fetch.swift in Sources */,
+				F710DEAF25C864E000FD4AC4 /* ManageTeamButton.swift in Sources */,
+				F710DED925C8656F00FD4AC4 /* SampleRealm.swift in Sources */,
+				F710DEBA25C864EA00FD4AC4 /* LastUpdate.swift in Sources */,
+				F710DECF25C8650100FD4AC4 /* User.swift in Sources */,
+				F710DEC725C864FD00FD4AC4 /* TasksView.swift in Sources */,
+				F710DEA125C863D000FD4AC4 /* AddTeamMemberView.swift in Sources */,
+				F710DED825C8656F00FD4AC4 /* SampleData.swift in Sources */,
+				F710DEBB25C864EA00FD4AC4 /* CheckBox.swift in Sources */,
+				F710DEC025C864EA00FD4AC4 /* CaptionLabel.swift in Sources */,
+				F710DEC525C864FD00FD4AC4 /* TaskView.swift in Sources */,
+				F710DEB825C864EA00FD4AC4 /* OpaqueProgressView.swift in Sources */,
+				F710DE7D25C862C600FD4AC4 /* ContentView.swift in Sources */,
+				F710DEB325C864E000FD4AC4 /* ProjectSelect.swift in Sources */,
+				F710DEB025C864E000FD4AC4 /* ProjectsView.swift in Sources */,
+				F710DEBD25C864EA00FD4AC4 /* LabeledText.swift in Sources */,
+				F710DE8325C8630E00FD4AC4 /* task_tracker_swiftuiApp.swift in Sources */,
+				F710DEBF25C864EA00FD4AC4 /* CallToActionButton.swift in Sources */,
+				F710DE7E25C862C600FD4AC4 /* AppState.swift in Sources */,
+				F710DEB225C864E000FD4AC4 /* ProjectEdit.swift in Sources */,
+				F710DEB925C864EA00FD4AC4 /* InputField.swift in Sources */,
+				F710DEBC25C864EA00FD4AC4 /* SearchBar.swift in Sources */,
+				F710DE8A25C8631500FD4AC4 /* Home.swift in Sources */,
+				F710DECE25C8650100FD4AC4 /* Project.swift in Sources */,
+				F710DECD25C8650100FD4AC4 /* Task.swift in Sources */,
+				F710DEDE25C865A700FD4AC4 /* PreviewHelpers.swift in Sources */,
+				F710DEA225C863D000FD4AC4 /* TeamsView.swift in Sources */,
+				F710DEB125C864E000FD4AC4 /* ProjectDetail.swift in Sources */,
+				F710DE9B25C863CA00FD4AC4 /* LoginView.swift in Sources */,
+				F710DE9C25C863CA00FD4AC4 /* LogoutButton.swift in Sources */,
+				F710DE8925C8631500FD4AC4 /* Search.swift in Sources */,
+				F710DEC625C864FD00FD4AC4 /* UpdateTaskView.swift in Sources */,
+				F710DEBE25C864EA00FD4AC4 /* LabeledButton.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -785,6 +925,56 @@
 			};
 			name = Release;
 		};
+		F710DE7625C862B600FD4AC4 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "task-tracker-swiftui Mac/task_tracker_swiftui_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"task-tracker-swiftui Mac/Preview Content\"";
+				DEVELOPMENT_TEAM = KLWDB45HD8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "task-tracker-swiftui Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tStudio.task-tracker-swiftui-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		F710DE7725C862B600FD4AC4 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "task-tracker-swiftui Mac/task_tracker_swiftui_Mac.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				DEVELOPMENT_ASSET_PATHS = "\"task-tracker-swiftui Mac/Preview Content\"";
+				DEVELOPMENT_TEAM = KLWDB45HD8;
+				ENABLE_HARDENED_RUNTIME = YES;
+				ENABLE_PREVIEWS = YES;
+				INFOPLIST_FILE = "task-tracker-swiftui Mac/Info.plist";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 11.1;
+				PRODUCT_BUNDLE_IDENTIFIER = "com.tStudio.task-tracker-swiftui-Mac";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SDKROOT = macosx;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -820,6 +1010,15 @@
 			buildConfigurations = (
 				49CDF73525515A6000DCFB28 /* Debug */,
 				49CDF73625515A6000DCFB28 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F710DE7825C862B600FD4AC4 /* Build configuration list for PBXNativeTarget "task-tracker-swiftui Mac" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F710DE7625C862B600FD4AC4 /* Debug */,
+				F710DE7725C862B600FD4AC4 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
